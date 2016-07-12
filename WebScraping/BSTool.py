@@ -7,9 +7,9 @@ import urllib
 # get title by url
 def getBSObj(url):
     try:
-        proxy_support = urllib.request.ProxyHandler({'http':'http://213.136.77.246:80'})
-        opener = urllib.request.build_opener( proxy_support)
-        urllib.request.install_opener(opener)
+ #       proxy_support = urllib.request.ProxyHandler({'http':'http://213.136.77.246:80'})
+ #       opener = urllib.request.build_opener( proxy_support)
+ #       urllib.request.install_opener(opener)
         html = urlopen(url)
     except HTTPError as e:
         return None
@@ -34,5 +34,5 @@ def getAllLinks(url):
 # read html and analyse
 if __name__ == '__main__':
     socket.setdefaulttimeout( 30)
-    getAllLinks('http://javseeds.com/');
+    getAllLinks('http://store.steampowered.com/');
 
